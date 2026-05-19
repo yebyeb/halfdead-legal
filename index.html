@@ -7,8 +7,16 @@
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.6; color: #222; background: #fafafa; }
         .card { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
-        h1 { margin-top: 0; color: #1a1a1a; }
-        .subtitle { color: #666; margin-bottom: 30px; }
+        .header { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; }
+        .header img { width: 88px; height: 88px; border-radius: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+        .header-text { flex: 1; }
+        h1 { margin: 0 0 4px 0; color: #1a1a1a; font-size: 28px; }
+        .subtitle { color: #666; margin: 0 0 30px 0; }
+        @media (max-width: 520px) {
+            .header { flex-direction: column; align-items: flex-start; gap: 14px; }
+            .header img { width: 72px; height: 72px; border-radius: 16px; }
+            h1 { font-size: 24px; }
+        }
         .links { list-style: none; padding: 0; }
         .links li { margin: 12px 0; }
         .links a { display: block; padding: 14px 18px; background: #f3f3f3; border-radius: 8px; text-decoration: none; color: #0066cc; font-weight: 500; transition: background 0.2s; }
@@ -19,14 +27,21 @@
 </head>
 <body>
     <div class="card">
-        <h1>Half Dead: A Story Game</h1>
-        <p class="subtitle">An interactive zombie story game by Yeb. Official legal and support pages.</p>
+        <div class="header">
+            <img src="icon.png" alt="Half Dead app icon">
+            <div class="header-text">
+                <h1>Half Dead: A Story Game</h1>
+                <p class="subtitle">An interactive zombie story game by Yeb. Official legal and support pages.</p>
+            </div>
+        </div>
 
         <ul class="links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
             <li><a href="support.html">Support</a></li>
         </ul>
+
+        <p class="subtitle">&nbsp;</p>
 
         <div class="footer">
             For general inquiries: <a href="mailto:yebappcontact@gmail.com">yebappcontact@gmail.com</a>
